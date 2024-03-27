@@ -17,8 +17,8 @@ eeglab nogui; %无GUI的方式
 
 %% 加载数据集
 
-subjectID = 19;
-folderPath = ['C:\Data\EEG Data\EEG\S' num2str(subjectID)];
+%subjectID = 11;
+folderPath = ['C:\Users\m1760\OneDrive\Remote Disk (D) (Software)\Data\EEG Data\EEG\S' num2str(subjectID)];
 dataset = ['S' num2str(subjectID) '_cleaned.set'];
 
 % folderPath = sprintf('C:\\Data\\EEG Data\\EEG\\S%d', subjectID); % 方法2
@@ -30,10 +30,11 @@ EEG = pop_loadset('filename', dataset, 'filepath', folderPath);
 
 %% 提取epoch
 
-conditions = {'Negative', 'Positive', '1', '2', '4', '5'};
+conditions = {'Negative', 'Positive', '1','2','4','5'};
 
 for con = 1:length(conditions)
-  EEG = ALLEEG(1);
+  %EEG = ALLEEG(1); %这里有问题
+  EEG = pop_loadset('filename', dataset, 'filepath', folderPath);
   %eeglab redraw;
   condition = conditions{con};
     
@@ -44,11 +45,11 @@ for con = 1:length(conditions)
 
                 decimal = str2double(EEG.event(i+1).type(5)); % 从 .1 到 .5
                 if decimal > 3  % 4 或 5            
-                    EEG.event(i-2).type = 'Positive';
-                elseif decimal < 3 % 1 或 2            
                     EEG.event(i-2).type = 'Negative';
+                elseif decimal < 3 % 1 或 2            
+                    EEG.event(i-2).type = 'Positive';
                 else % 3
-                    EEG.event(i-2).type = 'Natrual';
+                    EEG.event(i-2).type = 'Neutral';
                 end
             end
       end
