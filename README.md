@@ -19,7 +19,7 @@ ERPLab
 
 Clone the repo
 Open MATLAB
-Run the script
+Run the script - main.m
 
 
 
