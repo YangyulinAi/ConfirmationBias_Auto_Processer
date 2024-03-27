@@ -1,5 +1,5 @@
 # Confirmation Bias Epoch Extraction
-This project is designed for the automated extraction of EEG epochs in the Confirmation Bias experiment.
+This project is designed for the automated pre-precessing, extracting of EEG epochs, and generating ERPs in the Confirmation Bias experiment.
 
 ## Features
 - Extract EEG epochs under specific conditions.
@@ -12,6 +12,7 @@ These instructions will help you to set up and run the project on your local mac
 
 MATLAB R20XX
 EEGLAB
+ERPLab
 
 
 ### Installing
