@@ -1,4 +1,4 @@
-# Confirmation Bias Epoch Extraction
+# Confirmation Bias Auto Processer
 This project is designed for the automated pre-precessing, extracting of EEG epochs, and generating ERPs in the Confirmation Bias experiment.
 
 ## Features
@@ -50,7 +50,7 @@ This project is licensed under the MIT License - see the [LICENSE.md] file for d
 
 ---
 
-# 认知偏见项目 Epoch 提取
+# 认知偏见项目自动数据处理
 本项目是为了Confirmation Bias项目进行Epoch的自动化提取。
 
 ## 功能
